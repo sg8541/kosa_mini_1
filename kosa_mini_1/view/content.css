@@ -1,0 +1,163 @@
+h2{
+    margin: 10px 0px 5px 0px;
+    padding: 0px;
+}
+
+h4{
+    margin: 0px;
+    padding: 0px;
+}
+
+.wap {
+    position: relative;
+}
+
+.content-out{
+    margin: 0 auto;
+    padding-top: 16px;
+    width: 800px;
+}
+
+.content_inner{
+    border: 1px solid #ebebeb;
+    position: relative;
+}
+
+.top_image_line{
+    min-height: 144px;
+    position: relative;
+    
+}
+
+.top_image_line .image_present{
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.frame_g{
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.place_out_line{
+    margin: -64px auto 0;
+    padding-bottom: 4px;
+    position: relative;
+    text-align: center;
+    width: 744px;
+    z-index: 10;
+}
+
+.place_out_line .place_inner{
+    background: url(image/inner_box.png) repeat-y;
+    min-height: 187px;
+    padding-top: 27px;
+}
+
+.place_out_line .place_inner .place_brand_box{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 75px;
+}
+
+.restaurant_title{
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 50px;
+    padding: 2px 33px 0;
+    
+}
+
+.place_out_line .evalution_box{
+    height: 30px;
+    padding-top: 8px;
+    text-align: center; 
+}
+.place_out_line .evalution_link{
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: -1px;
+    line-height: 25px;
+    text-decoration: none;
+    vertical-align: top;
+}
+.place_info_box{
+    padding: 25px 79px 40px;
+    position: relative;
+}
+
+.place_info_box .detail_info_title{
+    font-weight: 700;
+    /*padding-bottom: 17px;*/
+}
+
+.detail_info_title{
+    font-size: 17px;
+    height: 23px;
+    letter-spacing: -2px;
+    line-height: 24px;
+   /* padding: 10px 0 0;*/
+}
+
+.place_info_detail{
+    line-height: 22px;
+    min-height: 22px;
+    padding-bottom: 10px;
+}
+
+.place_info_detail .info_title_detail{
+    float: left;
+}
+
+.place_info_icon{
+    display: block;
+    font-size: 1px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.address_icon{
+    background-image: url(image/%EB%B3%B4%EB%85%B8%EB%B3%B4%EB%85%B8.png);
+    margin: 3px 0 0 2px;
+    width: 13px;
+}
+.place_location{
+    padding-left: 24px;
+    position: relative;
+}
+.place_location .address_text{
+    display: block;
+    word-break: break-all;
+}
+
+.place_location .address_num_text {
+    color: #666;
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    padding-top: 3px;
+}
+
+.address_num_text .bar{
+    margin: 4px 6px 0;
+}
+
+.bar{
+    background: #e5e5e5;
+    display: inline-block;
+    height: 10px;
+    text-indent: -9999px;
+    vertical-align: top;
+    width: 1px;
+}
