@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>###가게 상호명</title>
+
+    <!--타이틀 옆 이미지 아이콘-->
+    <link href="//t1.daumcdn.net/localimg/localimages/07/common/kakaomap_favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/content.css">
+
+</head>
+
+<body>
+    <div class="wap">
+        <div id="" class="container">
+            <div class="content_out_line">
+                <div class="content_inner">
+                    <div class="content_top_line">
+                        <div class="top_image_line">
+                            <span class="image_present" style="background-image: url(image/1.jpg)">
+                            </span>
+                            <span class="frame_g">
+                            </span>
+                            <!--가게 title(브랜드, 상호명, 평점 등)-->
+                            <div class="place_out_line">
+                                <div class="place_inner">
+                                    <div class="place_brand_box">
+                                        <span>###브랜드 이름</span>
+                                    </div>
+                                    <h2 class="restaurant_title">###식당 상호명</h2>
+                                    <div class="evalution_box">
+                                        <span class="evalution_link">###후기</span> <span class="evalution_link">###리뷰</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--가게 상세 정보(info)-->
+                    <div class="place_info_box">
+                        <h3 class="detail_info_title">상세정보</h3>
+                        <div class="place_info_detail">
+                            <h4 class="info_title_detail">
+                                <span class="place_info_icon address_icon">위치</span>
+                            </h4>
+                            <div class="place_location">
+                                <span class="address_text">
+                                    ###서울 송파구 중대로 135 IT벤처타워 서관 12층 (우)05717
+                                </span>
+                                <span class="address_num_text">
+                                    ###지번
+                                    <span class="bar"></span>
+                                    ###가락동 75-7
+                                </span>
+                            </div>
+                        </div>
+                        <div class="place_info_detail place_homepage">
+                            <h4 class="info_title_detail">
+                                <span class="place_info_icon homepage_icon">홈페이지</span>
+                            </h4>
+                            <div class="place_location">
+                                <div class="homepage_text">
+                                    <a href="#" class="link_homepage">###www.homepage.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place_info_detail place_phone">
+                            <h4 class="info_title_detail">
+                                <span class="place_info_icon phone_icon">전화번호</span>
+                            </h4>
+                            <div class="place_location">
+                                <span class="phone_text">
+                                    <span class="phone_num_text">###02-1234-5678</span>
+                                    <span></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="place_info_detail">
+                            <h4 class="info_title_detail">
+                                <span class="place_info_icon address_icon">위치</span>
+                            </h4>
+                            <div class="place_location">
+                                <span class="address_text">
+                                    ###이 식당에 대한 간단한 소개글이 나타나면 좋을 것 같아용
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--메뉴 박스 시작-->
+                <div class="menu_info">
+                    <div class="menu_info_title_box">
+                        <h3 class="detail_info_title">메뉴</h3>
+                    </div>
+                    <div class="menu_image_wrap">
+                        <div class="menu_image_present">
+                            <a href="#none" class="view_menu" style="background-image: url(image/640x300.jpg)">
+                            </a>
+                        </div>
+                        <!--메뉴 목록 : 추후 기능 확장 때 고려하기-->
+                        <strong class="screen_out">메뉴 목록</strong>
+                        <ul class="menu_list">
+                            <li>
+                                <a href="#none" class="link_photo">
+                                    <span class="inner_photo">
+                                        <img src="image/%EB%B3%B4%EB%85%B8%EB%B3%B4%EB%85%B8.png" class="img_thumb" width="106" height="90">
+                                    </span>
+                                </a>
+                                <div class="menu_title_box">
+                                    <em class="screen_out">명 : </em>
+                                    <span class="menu_text">보노보노 하트맛</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--댓글 평가 및 작성-->
+                <div class="rate_container">
+                    <form>
+                        <div class="rate_box">
+                            <div class="rate_intro">
+                                <a href="#none" class="link_profile"></a>
+                                <p class="desc_rate">###이 장소의 후기를 남겨주세요</p>
+                                <!--star box-->
+
+                                <div class="user_rate">
+                                    <div class="grade_star_box">
+                                        <span class="ico_star_rate ">
+                                            <span class="ico_star_rate inner_star"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--댓글 작성 및 버튼 부분-->
+                            <div class="comment_writh_box">
+                                <textarea class="comment_write"></textarea>
+                                <div class="button_box">
+                                    <button class="select_button" type="reset">다시쓰기</button>
+                                    <button class="select_button" type="submit">작성완료</button>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+            <!--유저 댓글 시작-->
+            <div class="comments_box">
+                <strong class="total_comment">전체
+                    <span class="color_b">###20</span></strong>
+                <div class="user_grade_box">
+                    <strong class="screen_out">후기 요약</strong>
+                    <div class="grade_star">
+                        <em class="num_rate">5
+                            <span class="text_score">점</span>
+                        </em>
+                        <span class="ico_star_rate ">             
+                        <span class="ico_star_rate inner_star" style="width: 100%">
+                        </span></span>
+           
+                        
+                    </div>
+                </div>
+                <!--좋아요 태그 부분-->
+                <strong class="screen_out">추천 포인트</strong>
+                <div class="view_like_point">
+                    <span class="chip_like_point chip_type1">
+                        <span class="">가성비dsdfsdfs</span>
+                    </span>
+                </div>
+                
+            </div>
+            <!--지도 시작-->
+            <div class="map_container">
+                <h3 class="detail_info_title">찾아가는 길</h3>
+                <div class="map_box">
+                    <h4 class="screen_out">지도 보기</h4>
+                    <div class="view_map" style="overflow: hidden; background: url(image/256x256.png)">
+                        <div style="position: absolute; left: 0px; top: 0px; width: 100%;">
+                            <!--cursor: url(image/)-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body></html>
