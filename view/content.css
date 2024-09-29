@@ -17,6 +17,19 @@ em{
     font-weight: 400;
 }
 
+li, ul{
+    list-style: none;
+}
+
+img {
+    border: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
 .wap {
     position: relative;
 }
@@ -73,7 +86,7 @@ em{
 .place_out_line .place_inner {
     background: url(image/inner_box.png) repeat-y;
     min-height: 187px;
-    padding-top: 27px;
+    padding-top: 50px;
 }
 
 .place_out_line .place_inner .place_brand_box {
@@ -82,12 +95,24 @@ em{
     justify-content: center;
     padding: 0 75px;
 }
+.admin_button{
+    display: inline-block;
+    float: right;
+    padding: 15px;
+}
+.admin_button:hover{
+    display: inline-block;
+    float: right;
+    padding: 15px;
+    background-color: #FF885B;
+}
 
 .restaurant_title {
     font-size: 40px;
     letter-spacing: -2px;
     line-height: 50px;
     padding: 2px 33px 0;
+    color:#FF885B;
 
 }
 
@@ -247,7 +272,7 @@ em{
     background-position: 50% 50%;
     background-size: cover;
     float: left;
-    height: 150px;
+    height: 450px;
     margin-top: 1px;
     position: relative;
     width: 640px;
@@ -344,7 +369,14 @@ em{
 .rate_box .rate_intro .desc_rate{
     float: left;
     font-size: 18px;
+    padding: 15px 0 0 10px;
+}
+
+.rate_box .rate_intro .desc_rate_username{
+    float: left;
+    font-size: 18px;
     padding: 15px 0 0 16px;
+    font-weight: bold;
 }
 
 .rate_box .rate_intro .link_profile{
@@ -472,7 +504,7 @@ em{
 }
 .view_like_point .chip_like_point {
     border-radius: 30px;
-    color: #fff;
+    color: #ff885b;
     float: left;
     font-weight: 700;
     height: 36px;
@@ -483,4 +515,228 @@ em{
 
 .view_like_point .chip_like_point .chip_type1{
     background-color: aqua;
+}
+.ico_comm .ico_comm_fgm{
+    font-size: 1px;
+    line-height: 0;
+    overflow:hidden;
+    text-indent: -9999px;
+}
+
+.ico_comm {
+    background-repeat: no-repeat;
+}
+
+.view_like_point .chip_like_point .ico_like3{
+    display: inline-block;
+    height: 13px;
+    margin: 10px 5px 0 0;
+    vertical-align: top;
+    width: 13px;
+}
+
+.review_box{
+    padding-top: 20px;
+}
+
+.review_list > li{
+    border-top: 1px solid #f2f2f2;
+    font-size: 0;
+    min-height: 52px;
+    padding: 30px 0 18px 79px;
+    position: relative;
+}
+
+.review_list .profile_info{
+    background-image: url(image/%EB%B3%B4%EB%85%B8%EB%B3%B4%EB%85%B8.png);
+    /*108x108의 기본 프로필 이미지 필요*/
+    background-size:48px 48px;
+}
+
+.review_list .thumb_g{
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+.review_list .profile_info {
+    background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/bg_profile.png) no-repeat;
+    background-size: 100% 100%;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 48px;
+}
+
+.review_list .unit_info{
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.review_list .link_user{
+    float: left;
+}
+.review_list .inner_user{
+    display: flex;
+}
+
+.review_list .link_user .text_username{
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    max-width: 158px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.review_list .bar{
+    background: #e2e2e2;
+    height: 11px;
+    margin: 6px 6px 0;
+}
+
+.review_list .unit_info .text_desc{
+    color: #666;
+   /* float: left;*/
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 3px;
+}
+
+.review_list .unit_info .time_write{
+    color: #959595;
+    font-size: 14px;
+}
+.text_item{
+    padding-left: 6px;
+}
+
+.review_list .unit_info .text_item{
+    color: #666;
+   /* float: left;*/
+    font-size: 14px;
+}
+
+.review_list .time_write{
+   /* float: left;*/
+    letter-spacing: 0;
+    line-height: 21px;
+}
+
+.review_list .photo_group{
+    padding-top: 14px;
+}
+.review_list .photo_group .list_photo{
+    font-size: 0;
+    white-space: nowrap;
+}
+.review_list .photo_group .list_photo li{
+    border-top: 0;
+    display: inline-block;
+    padding: 0;
+}
+
+.review_list .photo_group .box_photo{
+    display: block;
+    height: 139px;
+    position: relative;
+    width: 139px;
+}
+
+.review_list .photo_group .img_thumb{
+    height: 100%;
+}
+
+.img_thumb{
+    vertical-align: top;
+    width: 100%;
+}
+
+.review_list .comment_info{
+    overflow: hidden;
+    padding: 9px 12px 0 0;
+}
+
+.review_list .text_comment{
+    color: #444;
+    line-height: 21px;
+    overflow: hidden;
+}
+
+.review_list .text_comment span {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    display: block;
+    display: -webkit-box;
+    font-size: 15px;
+    line-height: 22px;
+    max-height: 88px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.review_list .wrap_util {
+    right: 0;
+    top: 30px;
+}
+
+.wrap_util {
+    position: absolute;
+}
+
+.ico_comm {
+    background-image: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/rtn/ico_detail_240813.png);
+    background-size: 270px auto;
+}
+
+.ico_comm, .ico_comm_fgm {
+    display: block;
+    font-size: 1px;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.wrap_util .list_opt li {
+    border-top: 0;
+    min-height: auto;
+    padding: 0;
+}
+.wrap_util .link_util {
+    color: #444;
+    display: block;
+    font-size: 13px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.review_list .layer_util .link_util {
+    text-align: center;
+}
+
+.link_more {
+    border-top: 1px solid #f2f2f2;
+    display: block;
+    height: 56px;
+    line-height: 57px;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.link_more .ico_more {
+    background-position: -160px -60px;
+    display: inline-block;
+    height: 5px;
+    margin: 25px 0 0 6px;
+    vertical-align: top;
+    width: 10px;
+}
+
+.comment_user_button{
+    padding-left: 15px;
+}
+
+.comment_user_button:hover{
+    text-decoration: underline;
 }

@@ -24,7 +24,14 @@
                             </span>
                             <!--가게 title(브랜드, 상호명, 평점 등)-->
                             <div class="place_out_line">
+                                <!--관리자만 보이는 버튼-->
+                                <form>
+                                    <button type="submit" class="admin_button">삭제</button>
+                                    <button type="submit" class="admin_button">수정</button>
+
+                                </form>
                                 <div class="place_inner">
+
                                     <div class="place_brand_box">
                                         <span>###브랜드 이름</span>
                                     </div>
@@ -94,7 +101,7 @@
                     </div>
                     <div class="menu_image_wrap">
                         <div class="menu_image_present">
-                            <a href="#none" class="view_menu" style="background-image: url(image/640x300.jpg)">
+                            <a href="#none" class="view_menu" style="background-image: url(image/images.jfif);">
                             </a>
                         </div>
                         <!--메뉴 목록 : 추후 기능 확장 때 고려하기-->
@@ -120,7 +127,8 @@
                         <div class="rate_box">
                             <div class="rate_intro">
                                 <a href="#none" class="link_profile"></a>
-                                <p class="desc_rate">###이 장소의 후기를 남겨주세요</p>
+                                <p class="desc_rate_username">###닉네임</p>
+                                <p class="desc_rate">님! 이 장소의 후기를 남겨주세요</p>
                                 <!--star box-->
 
                                 <div class="user_rate">
@@ -152,36 +160,84 @@
                         <em class="num_rate">5
                             <span class="text_score">점</span>
                         </em>
-                        <span class="ico_star_rate ">             
-                        <span class="ico_star_rate inner_star" style="width: 100%">
-                        </span></span>
-           
-                        
+                        <span class="ico_star_rate ">
+                            <span class="ico_star_rate inner_star" style="width: 100%">
+                            </span></span>
+
+
                     </div>
                 </div>
-                <!--좋아요 태그 부분-->
+
                 <strong class="screen_out">추천 포인트</strong>
+                <!--좋아요 태그 부분인데 안나타남-->
                 <div class="view_like_point">
                     <span class="chip_like_point chip_type1">
-                        <span class="">가성비dsdfsdfs</span>
-                    </span>
+                        <span class="ico_comm ico_like3"></span>
+                        <span class="text_like">가성비dsdfsdfs</span>
                 </div>
-                
+                <!--리뷰 댓글 시작-->
+                <div class="review_box">
+                    <strong class="screen_out">후기 리스트</strong>
+                    <ul class="review_list">
+                        <li>
+                            <a href="#none" class="profile_info">
+                                <img src="image/1.jpg" width="48" height="48" class="thumb_g" alt onerror="this.style.display='none'">
+                            </a>
+                            <div class="unit_info">
+                                <em class="screen_out">작성자 : </em>
+                                <a href="#none" class="link_user">
+                                    <div class="inner_user">
+                                        <span class="text_username">###닉네임</span>
+                                    </div>
+                                </a>
+                                <span class="bar"></span>
+                                <span class="text_item">별점 : </span>
+                                <span class="text_desc">###5</span>
+                                <span class="bar"></span>
+                                <span class="text_item">작성일 : </span>
+                                <span class="time_write">###2024.09.30.</span>
+                            </div>
+                            <div class="photo_group">
+                                <ul class="list_photo">
+                                    <li>
+                                        <a href="#none" class="box_photo">
+                                            <img src="image/1.jpg" width="139" height="139" alt="후기사진" class="img_thumb">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="comment_info">
+                                <p class="text_comment">
+                                    <span>### 맛있는 보노 보노의 하트 아주 조았어요!</span>
+                                </p>
+                            </div>
+                            <div class="wrap_util">
+                                <form>
+                                    <button type="submit" class="comment_user_button">수정</button>
+                                    <button type="submit" class="comment_user_button">삭제</button>
+                                </form>
+                            </div>
+                </div>
+                </li>
+                </ul>
+                <a href="#none" class="link_more"><span class="txt_more">후기 더보기</span><span class="ico_comm ico_more"></span></a>
             </div>
-            <!--지도 시작-->
-            <div class="map_container">
-                <h3 class="detail_info_title">찾아가는 길</h3>
-                <div class="map_box">
-                    <h4 class="screen_out">지도 보기</h4>
-                    <div class="view_map" style="overflow: hidden; background: url(image/256x256.png)">
-                        <div style="position: absolute; left: 0px; top: 0px; width: 100%;">
-                            <!--cursor: url(image/)-->
-                        </div>
-                    </div>
 
+        </div>
+        <!--지도 시작-->
+        <div class="map_container">
+            <h3 class="detail_info_title">찾아가는 길</h3>
+            <div class="map_box">
+                <h4 class="screen_out">지도 보기</h4>
+                <div class="view_map" style="overflow: hidden; background: url(image/256x256.png)">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 100%;">
+                        <!--cursor: url(image/)-->
+                    </div>
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
     </div>
 </body></html>
