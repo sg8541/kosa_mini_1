@@ -37,7 +37,12 @@
                                     </div>
                                     <h2 class="restaurant_title">###식당 상호명</h2>
                                     <div class="evalution_box">
-                                        <span class="evalution_link">###후기</span> <span class="evalution_link">###리뷰</span>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/filled-star--v1.png" alt="filled-star--v1" class="icon_star" />
+                                        <span class="evalution_link">평점 : </span>
+                                        <span class="evalution_link">###5</span>
+                                        <span class="bar"></span>
+                                        <span class="evalution_link">리뷰 : </span>
+                                        <a href="#none" class="evalution_link">###1</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,6 +54,7 @@
                         <div class="place_info_detail">
                             <h4 class="info_title_detail">
                                 <span class="place_info_icon address_icon">위치</span>
+                                <img src="image/ico_location.png" class="address_icon">
                             </h4>
                             <div class="place_location">
                                 <span class="address_text">
@@ -63,7 +69,8 @@
                         </div>
                         <div class="place_info_detail place_homepage">
                             <h4 class="info_title_detail">
-                                <span class="place_info_icon homepage_icon">홈페이지</span>
+                                <span class="place_info_icon">홈페이지</span>
+                                <img src="image/icon-internet.png" width="14px" height="14px;" class="homepage_icon">
                             </h4>
                             <div class="place_location">
                                 <div class="homepage_text">
@@ -73,10 +80,12 @@
                         </div>
                         <div class="place_info_detail place_phone">
                             <h4 class="info_title_detail">
-                                <span class="place_info_icon phone_icon">전화번호</span>
+                                <span class="place_info_icon">전화번호</span>
+                                <img src="image/icon_phone.png" class="phone_icon">
                             </h4>
                             <div class="place_location">
                                 <span class="phone_text">
+
                                     <span class="phone_num_text">###02-1234-5678</span>
                                     <span></span>
                                 </span>
@@ -84,10 +93,11 @@
                         </div>
                         <div class="place_info_detail">
                             <h4 class="info_title_detail">
-                                <span class="place_info_icon address_icon">위치</span>
+                                <span class="place_info_icon">소개</span>
+                                <img src="image/icon-desc.png" class="icon_desc">
                             </h4>
                             <div class="place_location">
-                                <span class="address_text">
+                                <span class="title_info_text">
                                     ###이 식당에 대한 간단한 소개글이 나타나면 좋을 것 같아용
                                 </span>
                             </div>
@@ -147,97 +157,124 @@
                                     <button class="select_button" type="submit">작성완료</button>
                                 </div>
                             </div>
+                        </div>
                     </form>
+
                 </div>
-            </div>
-            <!--유저 댓글 시작-->
-            <div class="comments_box">
-                <strong class="total_comment">전체
-                    <span class="color_b">###20</span></strong>
-                <div class="user_grade_box">
-                    <strong class="screen_out">후기 요약</strong>
-                    <div class="grade_star">
-                        <em class="num_rate">5
-                            <span class="text_score">점</span>
-                        </em>
-                        <span class="ico_star_rate ">
-                            <span class="ico_star_rate inner_star" style="width: 100%">
-                            </span></span>
+                <!--유저 댓글 시작-->
+                <div class="comments_box">
+                    <strong class="total_comment">전체
+                        <span class="color_b">###20</span></strong>
+                    <div class="user_grade_box">
+                        <strong class="screen_out">후기 요약</strong>
+                        <div class="grade_star">
+                            <em class="num_rate">5
+                                <span class="text_score">점</span>
+                            </em>
+                            <span class="ico_star_rate ">
+                                <span class="ico_star_rate inner_star" style="width: 100%">
+                                </span></span>
 
 
+                        </div>
                     </div>
-                </div>
 
-                <strong class="screen_out">추천 포인트</strong>
-                <!--좋아요 태그 부분인데 안나타남-->
-                <div class="view_like_point">
-                    <span class="chip_like_point chip_type1">
-                        <span class="ico_comm ico_like3"></span>
-                        <span class="text_like">가성비dsdfsdfs</span>
-                </div>
-                <!--리뷰 댓글 시작-->
-                <div class="review_box">
-                    <strong class="screen_out">후기 리스트</strong>
-                    <ul class="review_list">
-                        <li>
-                            <a href="#none" class="profile_info">
-                                <img src="image/1.jpg" width="48" height="48" class="thumb_g" alt onerror="this.style.display='none'">
-                            </a>
-                            <div class="unit_info">
-                                <em class="screen_out">작성자 : </em>
-                                <a href="#none" class="link_user">
-                                    <div class="inner_user">
-                                        <span class="text_username">###닉네임</span>
-                                    </div>
+                    <strong class="screen_out">추천 포인트</strong>
+                    <!--좋아요 태그 부분인데 안나타남-->
+<!--                    <div class="view_like_point">
+                        <span class="chip_like_point chip_type1">
+                            <span class="ico_comm ico_like3"></span>
+                            <span class="text_like">가성비dsdfsdfs</span>
+                        </span>
+                    </div>-->
+                    <!--리뷰 댓글 시작-->
+                    <div class="review_box">
+                        <strong class="screen_out">후기 리스트</strong>
+                        <ul class="review_list">
+                            <li>
+                                <!--유저 프로필 이미지-->
+                                <a href="#none" class="profile_info">
+                                    <img src="image/1.jpg" width="48" height="48" class="thumb_g" alt onerror="this.style.display='none'">
                                 </a>
-                                <span class="bar"></span>
-                                <span class="text_item">별점 : </span>
-                                <span class="text_desc">###5</span>
-                                <span class="bar"></span>
-                                <span class="text_item">작성일 : </span>
-                                <span class="time_write">###2024.09.30.</span>
-                            </div>
-                            <div class="photo_group">
-                                <ul class="list_photo">
-                                    <li>
-                                        <a href="#none" class="box_photo">
-                                            <img src="image/1.jpg" width="139" height="139" alt="후기사진" class="img_thumb">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="comment_info">
-                                <p class="text_comment">
-                                    <span>### 맛있는 보노 보노의 하트 아주 조았어요!</span>
-                                </p>
-                            </div>
-                            <div class="wrap_util">
-                                <form>
-                                    <button type="submit" class="comment_user_button">수정</button>
-                                    <button type="submit" class="comment_user_button">삭제</button>
-                                </form>
-                            </div>
+                                <div class="unit_info">
+                                    <em class="screen_out">작성자 : </em>
+                                    <a href="#none" class="link_user">
+                                        <div class="inner_user">
+                                            <span class="text_username">###닉네임</span>
+                                        </div>
+                                    </a>
+                                    <span class="bar"></span>
+                                    <span class="text_item">별점 : </span>
+                                    <span class="text_desc">###5</span>
+                                    <span class="bar"></span>
+                                    <span class="text_item">작성일 : </span>
+                                    <span class="time_write">###2024.09.30.</span>
+                                </div>
+                                <div class="photo_group">
+                                    <ul class="list_photo">
+                                        <li>
+                                            <a href="#none" class="box_photo">
+                                                <img src="image/1.jpg" width="139" height="139" alt="후기사진" class="img_thumb">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="comment_info">
+                                    <p class="text_comment">
+                                        <span>### 맛있는 보노 보노의 하트 아주 조았어요!</span>
+                                    </p>
+                                </div>
+                                <div class="wrap_util">
+                                    <form>
+                                        <button type="submit" class="comment_user_button">답글</button>
+                                        <button type="submit" class="comment_user_button">수정</button>
+                                        <button type="submit" class="comment_user_button">삭제</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="reply_comment_list">
+                                <a href="#none" class="reply_img">
+                                    <img width="16" height="16" src="https://img.icons8.com/small/16/down-right.png" alt="down-right" class="icon_reply"/>
+                                </a>
+                                <div class="unit_info">
+                                    <em class="screen_out">관리자 : </em>
+                                    <div class="comment_info_reply">
+                                        <p class="text_comment">
+                                            <span>### 맛있게 드셔주셔서 감사합니다!</span>
+                                        </p>
+                                    </div>
+                                    <div class="wrap_util">
+                                        <form>
+                                            <button type="submit" class="comment_user_button">수정</button>
+                                            <button type="submit" class="comment_user_button">삭제</button>
+                                        </form>
+                                    </div>
+                                </div>
+            
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#none" class="link_more">
+                        <span class="txt_more">후기 더보기</span>
+                        <span class="ico_comm ico_more"></span>
+                    </a>
                 </div>
-                </li>
-                </ul>
-                <a href="#none" class="link_more"><span class="txt_more">후기 더보기</span><span class="ico_comm ico_more"></span></a>
             </div>
-
-        </div>
-        <!--지도 시작-->
-        <div class="map_container">
-            <h3 class="detail_info_title">찾아가는 길</h3>
-            <div class="map_box">
-                <h4 class="screen_out">지도 보기</h4>
-                <div class="view_map" style="overflow: hidden; background: url(image/256x256.png)">
-                    <div style="position: absolute; left: 0px; top: 0px; width: 100%;">
-                        <!--cursor: url(image/)-->
+            <!--지도 시작-->
+            <div class="map_container">
+                <h3 class="detail_info_title">찾아가는 길</h3>
+                <div class="map_box">
+                    <h4 class="screen_out">지도 보기</h4>
+                    <div class="view_map" style="overflow: hidden; background: url(image/256x256.png)">
+                        <div style="position: absolute; left: 0px; top: 0px; width: 100%;">
+                            <!--cursor: url(image/)-->
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    </div>
-    </div>
-</body></html>
+
+</body>
+
+</html>

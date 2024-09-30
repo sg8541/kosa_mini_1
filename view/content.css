@@ -10,6 +10,7 @@ h4, p {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 em{
@@ -30,6 +31,8 @@ button {
     border: 0;
     cursor: pointer;
 }
+
+
 .wap {
     position: relative;
 }
@@ -107,6 +110,15 @@ button {
     background-color: #FF885B;
 }
 
+.evalution_box .bar{
+    margin-top: 7px;
+    height: 14px;
+}
+
+.icon_star{
+    width: 25px;
+    height: 25px;
+}
 .restaurant_title {
     font-size: 40px;
     letter-spacing: -2px;
@@ -168,9 +180,8 @@ button {
 }
 
 .address_icon {
-    background-image: url(image/%EB%B3%B4%EB%85%B8%EB%B3%B4%EB%85%B8.png);
-    margin: 3px 0 0 2px;
-    width: 13px;
+    margin: 0px 0 0 0px;
+    width: 14px;
 }
 
 .place_location {
@@ -209,9 +220,10 @@ button {
 }
 
 .place_info_icon .homepage_icon {
-    height: 14px;
+    /*지구 아이콘 제작자: photo3idea_studio - Flaticon*/
+    height: 5px;
     margin: 4px 0 0 1px;
-    width: 15px;
+    width: 5px;
 }
 
 .place_info_detail .place_homepage .homepage_text {
@@ -241,12 +253,27 @@ button {
     margin: 6px 0 0 1px;
     width: 15px;
 }
-
-.place_location .phone_text .phone_num_text {
-    font-size: 14px;
-    letter-spacing: 0;
+.phone_icon{
+    margin-top: 4px;
+    width: 12px;
+    height: 15px;
+    margin-left: 1px;
 }
 
+.place_location .phone_text .phone_num_text {
+    font-size: 15px;
+    letter-spacing: 0;
+}
+.place_location .title_info_text{
+    font-size: 16px;
+    display: block;
+    word-break: break-all;
+    
+}
+
+.icon_desc{
+    width: 15px;
+}
 .menu_info {
     border: 1px solid #eaeaea;
     margin-top: 10px;
@@ -377,6 +404,7 @@ button {
     font-size: 18px;
     padding: 15px 0 0 16px;
     font-weight: bold;
+    color:#FF885B;
 }
 
 .rate_box .rate_intro .link_profile{
@@ -485,6 +513,7 @@ button {
     height: 30px;
     letter-spacing: 0;
     line-height: 30px;
+    color: #FF885B;
 }
 
 .user_grade_box .text_score{
@@ -493,6 +522,7 @@ button {
     line-height: 33px;
     margin-left: 4px;
     vertical-align: top;
+    color: #000000;
     
 }
 
@@ -516,6 +546,16 @@ button {
 .view_like_point .chip_like_point .chip_type1{
     background-color: aqua;
 }
+
+
+.review_list .reply_comment_list{
+    padding-top: 10px;
+}
+
+.reply_comment_list{
+    background-color: #f2f2f2;
+}
+
 .ico_comm .ico_comm_fgm{
     font-size: 1px;
     line-height: 0;
@@ -536,7 +576,9 @@ button {
 }
 
 .review_box{
-    padding-top: 20px;
+    /*padding-top: 20px; */
+    /*태그 넣을 때 padding 확장필요*/
+    padding-top:10px;
 }
 
 .review_list > li{
@@ -553,10 +595,28 @@ button {
     background-size:48px 48px;
 }
 
+.review_list .reply_img{
+    background-size: 100% 100%;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 10px;
+    width: 48px;
+    margin-left: 25px;
+   
+}
+
+
 .review_list .thumb_g{
     display: block;
     height: 48px;
     width: 48px;
+}
+
+.review_list .reply_img .thumb_g{
+    display: block;
+    height: 24px;
+    width: 24px;
 }
 .review_list .profile_info {
     background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/bg_profile.png) no-repeat;
@@ -653,6 +713,11 @@ button {
     width: 100%;
 }
 
+.icon_reply{
+    margin-top: 20px;
+}
+
+
 .review_list .comment_info{
     overflow: hidden;
     padding: 9px 12px 0 0;
@@ -677,6 +742,14 @@ button {
     word-break: break-all;
 }
 
+.comment_info_reply{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.review_list .reply_comment_list .wrap_util {
+    right: 0;
+    top: 10px;
+}
 .review_list .wrap_util {
     right: 0;
     top: 30px;
@@ -735,6 +808,7 @@ button {
 
 .comment_user_button{
     padding-left: 15px;
+    color:#959595;
 }
 
 .comment_user_button:hover{
