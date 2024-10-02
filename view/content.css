@@ -1,3 +1,7 @@
+html{
+    background: #f9f9f9;
+}
+
 h2 {
     margin: 10px 0px 5px 0px;
     padding: 0px;
@@ -46,6 +50,7 @@ button {
 .content_inner {
     border: 1px solid #ebebeb;
     position: relative;
+    background: #fff;
 }
 
 .top_image_line {
@@ -275,6 +280,7 @@ button {
     width: 15px;
 }
 .menu_info {
+    background-color: #fff;
     border: 1px solid #eaeaea;
     margin-top: 10px;
     padding: 39px 79px 32px;
@@ -366,6 +372,7 @@ button {
     border: 1px solid #eaeaea;
     margin-top: 10px;
     padding: 29px 79px 47px;
+    background: #fff;
 }
 
 .map_box {
@@ -385,6 +392,7 @@ button {
     border : 1px solid #eaeaea;
     margin-top: 10px;
     padding: 23px 79px 55px 79px;
+    background: #fff;
     
 }
 
@@ -477,6 +485,7 @@ button {
     border: 1px solid #eaeaea;
     margin-top: 10px;
     padding: 29px 79px 31px;
+    background: #fff;
 }
 
 .comments_box .total_comment{
@@ -553,7 +562,7 @@ button {
 }
 
 .reply_comment_list{
-    background-color: #f2f2f2;
+    background-color: #e7e7e7;
 }
 
 .ico_comm .ico_comm_fgm{
@@ -626,11 +635,17 @@ button {
     position: absolute;
     top: 30px;
     width: 48px;
+} 
+.reply_comment_list .unit_info{
+    overflow: hidden;
+    margin-bottom: 28px;
+    margin-left: 100px;
 }
-
 .review_list .unit_info{
     overflow: hidden;
     margin-bottom: 28px;
+    /*프로필 사진 넣을 시 아래 margin 지울 것*/
+    margin-left: -80px;
 }
 
 .review_list .link_user{
