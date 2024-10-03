@@ -321,6 +321,25 @@ a:focus {
     top: 0;
 }
 
+.search-form .form-control {
+    margin-right: 10px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    border: none;
+    background: #fff;
+    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #ccc;
+}
+
+.btn-search:hover{
+    background-color: #FF885B;
+}
+
+/*.icon-search{
+    background-image: url(../image/icon_search.png);
+}*/
 /*end header section*/
 /* slider section */
 

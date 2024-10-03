@@ -494,9 +494,16 @@
                     <a href="home.html">홈</a>
                     <a href="intro.html">소개</a>
                     <a href="contact.html">문의</a>
-                    <a href="search.html">
-                        <img width="32" height="32" src="../image/icon_search.png" alt="검색하기" />
-                    </a>
+                    <!--<a href="search.html">-->
+                       <form action="#" class="search-form d-inline-block">
+
+              <div class="d-flex">
+                <input type="email" class="form-control" placeholder="Search..." data-listener-added_c71bfbd9="true">
+                <button type="submit" class="btn btn-search"> <img width="32" height="32" src="../image/icon_search.png" alt="검색하기" /><span class="icon-search"></span></button>
+              </div>
+            </form>
+                       
+                    <!--</a>-->
                     <!-- 드롭다운 메뉴 추가 -->
                     <div class="dropdown">
                         <button id="userMenuButton">▼</button>
@@ -530,6 +537,7 @@
                 <li data-filter=".western-food">양식</li>
                 <li data-filter=".cafe">카페</li>
             </ul>
+            
 
             <div class="filters-content">
                 <div class="row grid">
