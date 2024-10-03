@@ -11,7 +11,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="">
+    <link rel="shortcut icon" href="../image/favicon-32x32.png" type="">
 
     <title> 먹고살코 </title>
 
@@ -49,9 +49,9 @@
             width: 100%;
             background-color: #fff;
             /* 배경색 */
-            border-bottom: 2px solid #FF885B;
+            /* border-bottom: 2px solid #FF885B;*/
             /* 테두리 추가 및 색상 변경 */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
             /* 헤더에 그림자 추가 */
             /* 고정 헤더 position: fixed;  */
             top: 0;
@@ -80,17 +80,20 @@
             display: flex;
             align-items: center;
             margin-left: 30px;
+            z-index: 1;
         }
 
         .header .logo img {
-            width: 50px;
+            width: 25%;
             height: auto;
             margin-right: 10px;
+
         }
 
         .header .logo h1 {
             font-size: 24px;
-            color: #FF885B;
+            color: #fff;
+            margin-top: 7px;
         }
 
         /* 내비게이션 스타일 */
@@ -104,7 +107,7 @@
 
         .nav a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
             transition: color 0.5s;
             padding: 8px 12px;
@@ -127,7 +130,7 @@
             font-size: 16px;
             display: flex;
             align-items: center;
-            color: #333;
+            color: #fff;
             font-weight: bold;
         }
 
@@ -410,32 +413,94 @@
 </head>
 
 <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('#mySlider .slide');
+            const dots = document.querySelectorAll('.dot');
+            let slideInterval;
+
+            // 첫 번째 슬라이드를 기본으로 활성화
+            showSlide(currentSlide);
+
+            // 각 점을 클릭했을 때 해당 슬라이드로 이동
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    showSlide(index);
+                    resetSlideInterval(); // 슬라이드 인터벌 재설정
+                });
+            });
+
+            // 슬라이드를 자동으로 변경하는 함수
+            function autoSlide() {
+                currentSlide = (currentSlide + 1) % slides.length; // 다음 슬라이드로 이동
+                showSlide(currentSlide);
+            }
+
+            // 자동 슬라이드 설정 (3초마다 변경)
+            function startSlideInterval() {
+                slideInterval = setInterval(autoSlide, 2500); // 3000ms = 3초
+            }
+
+            // 슬라이드 인터벌 초기화
+            function resetSlideInterval() {
+                clearInterval(slideInterval); // 기존 인터벌 클리어
+                startSlideInterval(); // 새 인터벌 시작
+            }
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+
+                currentSlide = index;
+            }
+
+            startSlideInterval(); // 자동 슬라이드 시작
+        });
+
+    </script>
 
     <div class="hero_area">
-                    <div class="bg-box">
-                <div class="slider">
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                </div>
+        <div class="bg-box">
+            <div id="mySlider" class="slider">
+                <div class="slide active" style="background-image: url(../../image/food1.jpg);"></div>
+                <div class="slide" style="background-image: url(../../image/food2.png);"></div>
+                <div class="slide" style="background-image: url(../../image/food3.jpg);"></div>
+                <div class="slide" style="background-image: url(../../image/food4.jpg);"></div>
             </div>
+
+            <!-- 점 버튼 -->
+            <div class="dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+
         <!-- header section strats -->
         <header class="header">
 
 
             <div class="container-inner">
                 <div class="logo">
-                    <img src="main_logo.png" alt="Main Logo">
+                    <img src="../image/main_logo.jpg" alt="Main Logo">
                     <h1>먹코살코</h1>
                 </div>
                 <nav class="nav" id="mainNav">
                     <a href="home.html">홈</a>
                     <a href="intro.html">소개</a>
                     <a href="contact.html">문의</a>
+                    <a href="search.html">
+                        <img width="32" height="32" src="../image/icon_search.png" alt="검색하기" />
+                    </a>
                     <!-- 드롭다운 메뉴 추가 -->
                     <div class="dropdown">
                         <button id="userMenuButton">▼</button>
+
                         <div class="dropdown-content" id="userMenu">
                             <!-- 로그인 전 메뉴 -->
                             <a href="#" id="loginLink">로그인</a>
@@ -459,16 +524,16 @@
 
             <ul class="filters_menu">
                 <li class="active" data-filter="*">All</li>
-                <li data-filter=".burger">한식</li>
-                <li data-filter=".pizza">중식</li>
-                <li data-filter=".pasta">일식</li>
-                <li data-filter=".fries">양식</li>
-                <li data-filter=".fries">카페</li>
+                <li data-filter=".korean-food">한식</li>
+                <li data-filter=".chinese-food">중식</li>
+                <li data-filter=".japanese-food">일식</li>
+                <li data-filter=".western-food">양식</li>
+                <li data-filter=".cafe">카페</li>
             </ul>
 
             <div class="filters-content">
                 <div class="row grid">
-                    <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="col-sm-6 col-lg-4 all korean-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -500,7 +565,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="col-sm-6 col-lg-4 all korean-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -532,7 +597,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="col-sm-6 col-lg-4 all chinese-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -608,7 +673,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all pasta">
+                    <div class="col-sm-6 col-lg-4 all japanese-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -760,7 +825,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all pizza">
+                    <div class="col-sm-6 col-lg-4 all western-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -836,7 +901,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="col-sm-6 col-lg-4 all western-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -912,7 +977,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all burger">
+                    <div class="col-sm-6 col-lg-4 all cafe">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -988,7 +1053,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4 all pasta">
+                    <div class="col-sm-6 col-lg-4 all western-food">
                         <div class="box">
                             <div>
                                 <div class="img-box">
@@ -1076,91 +1141,125 @@
 
 
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              프로젝트 소개
-                
-            </h4>
-            <p>먹코살코은 최고의 맛집 제공하기 위해 최선을 다하고 있습니다.</p>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  홈
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
+    <!-- footer section -->
+    <footer class="footer_section">
+            <div class="footer-container">
+            <!-- 회사 소개 -->
+            <div class="footer-section">
+                <h4>프로젝트 소개</h4>
+                <p>먹코살코은 최고의 맛집 제공하기 위해 최선을 다하고 있습니다.</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-             <h4>연락처</h4>
+            <!-- 빠른 링크 -->
+            <div class="footer-section">
+                <h4>빠른 링크</h4>
+                <ul>
+                    <li><a href="home.html">홈</a></li>
+                    <li><a href="intro.html">소개</a></li>
+                    <li><a href="service.html">서비스</a></li>
+                    <li><a href="contact.html">문의</a></li>
+                </ul>
+            </div>
+            <!-- 연락처 -->
+            <div class="footer-section">
+                <h4>연락처</h4>
                 <ul>
                     <li>전화: 02-112-7777</li>
                     <li>이메일: admin@taste_police.com</li>
                     <li>주소: 서울특별시 송파구 중대로 135, 서관 12층</li>
                 </ul>
-            <div class="footer_social">
-             <h4>소셜 미디어</h4>
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>
             </div>
-          </div>
+            <!-- 소셜 미디어 -->
+            <div class="footer-section">
+                <h4>소셜 미디어</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yourprofile" aria-label="페이스북">
+                        <img src="facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.twitter.com/yourprofile" aria-label="트위터">
+                        <img src="twitter_icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/yourprofile" aria-label="인스타그램">
+                        <img src="instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 footer-col">
-          <h4>
-            Opening Hours
-          </h4>
-          <p>
-            Everyday
-          </p>
-          <p>
-            10.00 Am -10.00 Pm
-          </p>
+<!--
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>
+                            프로젝트 소개
+
+                        </h4>
+                        <p>먹코살코은 최고의 맛집 제공하기 위해 최선을 다하고 있습니다.</p>
+                                    
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>
+                        빠른 링크
+                    </h4>
+                    <p>
+                        홈
+                    </p>
+                    <p>
+                        소개
+                    </p>
+                    <p>
+                        서비스
+                    </p>
+                    <p>
+                        문의
+                    </p>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <h4>연락처</h4>
+                        <ul>
+                            <li>전화: 02-112-7777</li>
+                            <li>이메일: admin@taste_police.com</li>
+                            <li>주소: 서울특별시 송파구 중대로 135, 서관 12층</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <h4>소셜 미디어</h4>
+                        <a href="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+-->
+            <div class="footer-info">
+
+                <p>
+                    &copy;<span id="displayYear"></span> 먹코살코. All rights reserved.
+           Distributed By
+          <a target="_blank">ThemeWagon</a>
+                </p>
+            </div>
         </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span>&copy; 2024 먹코살코. All rights reserved.
-          <!--<a href="https://html.design/">Free Html Templates</a><br><br>
-          &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>-->
-        </p>
-      </div>
-    </div>
-  </footer>
-  <!-- footer section -->
-  <!-- footer section -->
+    </footer>
+    <!-- footer section -->
+    <!-- footer section -->
 
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
