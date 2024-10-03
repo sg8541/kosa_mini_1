@@ -1,3 +1,4 @@
+
 /*검색바 부분*/
 
 .wrap_search_header {
@@ -66,11 +67,29 @@ blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
 }
 
 /*검색 카테고리*/
-.search-result{
+.search-result {
     color: #666;
     font-size: 16px;
     margin: 5px 0px 5px 20px;
+    display: inline;
 }
+.result-sort {
+    display: inline-block;
+    float: right;
+}
+
+.result-sort span{
+    color: #666;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.result-sort span:active{
+    color:#333;
+    font-weight: bold;
+}
+
 
 
 .search_header {
@@ -106,6 +125,7 @@ blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4,
 }
 a, a:active, a:hover {
     text-decoration: none;
+    color:#333;
 }
 dl, li, menu, ol, ul {
     list-style: none;
@@ -295,32 +315,6 @@ body {
 .food_section .box:hover .img-box img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-}
-
-.food_section .btn-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 45px;
-}
-
-.food_section .btn-box a {
-    display: inline-block;
-    padding: 10px 55px;
-    color: #666;
-    border-radius: 45px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border: 1px solid #e7e7e7;
-}
-
-.food_section .btn-box a:hover {
-    background-color: #FF885B;
-    color: white;
-    border: none;
 }
 
 li {
@@ -730,4 +724,31 @@ button {
 .comment_user_button:hover{
     text-decoration: underline;
     text-underline-offset:5px;
+}
+
+
+
+.result_article .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+.result_article .btn-box a {
+    display: inline-block;
+    padding: 10px 55px;
+    color: #666;
+    border-radius: 45px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #e7e7e7;
+}
+
+.result_article .btn-box a:hover {
+    background-color: #FF885B;
+    color: white;
+    border: none;
 }
