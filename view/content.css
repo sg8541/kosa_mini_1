@@ -812,6 +812,11 @@ button {
     text-align: center;
 }
 
+
+.link_more:hover{
+    color: #FF885B;
+}
+
 .link_more .ico_more {
     background-position: -160px -60px;
     display: inline-block;
@@ -828,4 +833,5 @@ button {
 
 .comment_user_button:hover{
     text-decoration: underline;
+    text-underline-offset:5px;
 }
